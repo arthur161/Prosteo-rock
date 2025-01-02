@@ -40,6 +40,8 @@ body * {
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
+
+/* profile */
 #profile {
   text-align: center;
   padding: 24px;
@@ -53,10 +55,9 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
-  margin-bottom: 30px;
 }
-/*switch */
 
+/*switch */
 #switch {
   position: relative;
   width: 64px;
@@ -72,9 +73,10 @@ body * {
 
   position: absolute;
   top: 50%;
-  animation: slide-back 0.6s forwards;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.6s;
 }
 #switch button:hover {
   outline: 8px solid var(--social-surface-color);
@@ -170,6 +172,19 @@ footer a {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
 @keyframes slide-in {
   from {
     left: 0;
@@ -178,6 +193,7 @@ footer a {
     left: 50%;
   }
 }
+
 @keyframes slide-back {
   from {
     left: 50%;
